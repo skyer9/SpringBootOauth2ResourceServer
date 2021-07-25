@@ -1,0 +1,23 @@
+
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-uri: http://auth.localhost:9000/oauth/token_key
+#    jwt:
+#      signkey: 123@#$
+#    resource:
+#      token-info-uri: http://localhost:9000/oauth/check_token
+#    client:
+#      client-id: foo
+#      client-secret: bar
+
+server:
+  port: 9001
+
+logging:
+  level:
+    org:
+      springframework:
+        web: INFO
+        security: INFO
