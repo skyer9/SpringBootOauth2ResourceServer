@@ -22,11 +22,13 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.security:spring-security-jwt'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'commons-io:commons-io:2.6'
 
     // 버전을 명시적으로 지정해야 한다(?)
     implementation 'org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.5.2'
 
+    runtimeOnly 'mysql:mysql-connector-java'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
