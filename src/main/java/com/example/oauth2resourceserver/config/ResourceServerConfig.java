@@ -18,7 +18,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
         http.headers().frameOptions().disable();
         http.authorizeRequests()
-                .antMatchers("/api/userinfo").access("#oauth2.hasScope('profile')")
+                .antMatchers("/api/read/**").access("#oauth2.hasScope('read')")
+                .antMatchers("/api/write/**").access("#oauth2.hasScope('write')")
                 .anyRequest().authenticated();
     }
 }
